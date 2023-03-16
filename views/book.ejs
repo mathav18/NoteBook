@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4d02abcf66.js" crossorigin="anonymous"></script>
+    <style> @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap'); </style> 
+    <link href="/book.css" rel="stylesheet" type="text/css" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="whole__container">
+        <div class="navbar">
+            <div class="temp" onclick="history.back()">
+                <i class="fa-solid fa-arrow-left"></i>
+                <p>Go Back</p>
+                <p></p>
+            </div>
+
+
+            <div class="temp" style="margin-left: 100px;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+               <input type="text" oninput="filter(this)">
+                <p></p>
+            </div>
+
+
+            <div class="temp" style="margin-left: 300px;">
+               <h2>NoteBooks</h2>
+            </div>
+
+
+            <div class="temp" style="margin-left: 620px;">
+                <button id="add">
+                <i class="fa-solid fa-plus"></i>
+               <p>Add Note</p>
+                </button>
+            </div>
+
+
+            <div class="temp" style="margin-left: 50px;">
+                <button value="">
+                    <i class="fa-regular fa-user" ></i>
+                </button>
+               
+            </div>
+        </div>
+
+        <div class="feed">
+
+
+<%for(let i=result.length-1;0<=i;i--){%>      
+ <button class="notebook" value="<%=result[i].id%>" >   
+            <div class="book" >
+                <div class="dropdown">
+                    <i class="fa-solid fa-ellipsis" id="menu"></i>
+                    <div class="book__navbar">
+                        <p onclick="editnotes(this)">Edit</p>
+                        <p style="color:red" id="delete" onclick="deleteNotes(this)"> Delete</p>
+                    </div>
+                </div>
+              <div class="title" onclick="showNote(this)" >
+                <%=result[i].notes%>
+              </div>
+ </div>
+           </button>
+<%}%>
+           
+
+           <div class="hideDiv">
+
+            <div class="empty">
+                <div class="right"></div>
+                <div class="textAraeparent">
+
+                   
+                    <div class="top">
+                        <button> <i class="fa-solid fa-xmark" id="xmark"></i></button>
+                        <button value="<%=bookid%> <%=userid%>" onclick="addNote(this)"><i class="fa-solid fa-check" ></i></button>
+                    </div>
+                   <textarea id="content"></textarea>
+
+                   <div class="bottom"></div>
+               
+                </div>
+            
+                <div class="right"></div>
+            
+                </div>
+            
+
+            </div>
+
+
+
+
+            <div class="hideDiv2">
+
+                <div class="empty">
+                    <div class="west"></div>
+                    <div class="textAraeparent">
+                        <div class="top">
+                            <button> <i class="fa-solid fa-xmark" id="xmark2"></i></button>
+                          
+                        </div>
+                       <textarea id="content" class="area2"></textarea>
+    
+                       <div class="bottom"></div>
+                   
+                    </div>
+                
+                    <div class="west"></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            <div class="hideDiv3">
+
+                <div class="empty">
+                    <div class="left"></div>
+                    <div class="textAraeparent">
+                        <div class="top">
+                            <button> <i class="fa-solid fa-xmark" id="xmark3"></i></button>
+                            <button  onclick="UpdateNotes(this)" id="btn"><i class="fa-solid fa-check"  ></i></button>
+                          
+                        </div>
+                       <textarea id="content" class="area3"></textarea>
+    
+                       <div class="bottom"></div>
+                   
+                    </div>
+                
+                    <div class="left"></div>
+                    </div>
+                </div>
+
+
+                <div class="hideDiv4">
+
+                    <div class="empty">
+                       <div class="deleteparent">
+                       <p>Are you sure you want to <br>delete the note card?</p>
+                       <div class="delete__bottom">
+                        <button style="background: #e5e5e5;color:#000" id="can">Cancel</button>
+                        <button class="dlt" onclick="removeNote(this)">Delete</button>
+                       </div>
+                    </div>
+               </div>
+
+           </div>
+  
+
+
+
+   
+</div>
+    
+</div>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/book.js"></script>
+</body>
+</html>

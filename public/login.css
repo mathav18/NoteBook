@@ -1,0 +1,125 @@
+body,html{
+    width: 100%;
+    height:100%;
+    margin:0;
+    background-color: #AFE9DD;
+    font-family: 'Outfit', sans-serif;
+    
+}
+h1{color: #fff;}
+label{color: #5A698F;}
+p{color:rgb(172, 172, 172);text-align: center;}
+span{color:#0094b9;cursor: pointer;}
+
+.whole{
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.parent{
+    width:35%;
+    height:80%;
+   
+   
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.parent2{
+    width:35%;
+    height:80%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position:absolute;
+    display: none;
+}
+
+
+.feed__div{
+    width:100%;
+    height:60%;
+     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+
+}
+.login_top{
+    width:100%;
+    height:40%;
+    background: #005970;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.login_top a{
+    color:white;
+    font-size:50px;
+    margin-top: 150px;
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+.message__container{
+    width:500px;
+    min-height:700px;
+    height:auto;
+    background-color:#161D2F;
+   border-radius: 20px;
+   padding: 20px 20px 20px 40px;
+   display:flex;
+   flex-direction: column;
+ }
+ .message__container2{
+    width:500px;
+    min-height:420px;
+    height:auto;
+    background-color:#161D2F;
+   border-radius: 20px;
+   padding: 20px 20px 20px 40px;
+   display:flex;
+   flex-direction: column;
+   position: relative;
+   margin-top:-82%;
+   display: none;
+ }
+
+input{
+    width:470px;
+    height:40px;
+    background:none;
+    border: none;
+    border-bottom: 1px solid #5A698F;
+    color:rgb(190, 190, 190);
+    font-weight: bolder;
+    font-size:20px;
+    margin-top: -20px;
+
+}
+
+
+input:focus{
+    outline: none;
+}
+button{
+    height:50px;
+    width:475px;
+    background: #005970;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size:25px;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bookmarked{
+    color:#FC4747;
+}

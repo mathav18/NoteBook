@@ -1,0 +1,312 @@
+body,html{
+    width: 100%;
+    height:100%;
+    margin:0;
+    
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+.whole__container{
+    width:100%;
+    height:100%
+}
+.navbar{
+    height: 5%;
+    width:100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    /* justify-content:; */
+ /* flex-wrap: wrap; */
+}
+.feed{
+    width: 100%;
+    height:90%;
+    background: #F5F5F5;
+    /* padding:50px; */
+    padding-top: 50px;
+    overflow-y: scroll;
+    
+}
+::-webkit-scrollbar{
+    width:0px;
+}
+.temp{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+.logo{
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    margin-right: 10px;
+}
+.temp i{
+    color:rgb(121, 121, 121);
+    font-size:23px;
+    padding-right: 10px;
+   
+}
+.temp p{
+   font-size: 20px;
+   font-weight: lighter;
+   
+}
+.temp input{
+    width:300px;
+    border: none;
+    border-bottom: 1px solid ;
+
+}
+input:focus{
+    outline: none;
+}
+button{
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.note__book__parent{
+    width:150px;
+    height:220px;
+    float: left;
+    margin: 30px 58px;
+    text-align: center;
+
+}
+#trash{
+    font-size:18px;
+    color:rgb(0, 0, 0);
+    position: absolute;
+   display: none;
+   margin-left: 50px;
+   cursor: pointer;
+ 
+}
+.note__book__parent:hover #trash{
+  display: block;
+
+}
+
+.notebook{
+    width:150px;
+    height:210px;
+  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    flex-direction: column;
+   
+    
+     border-bottom-right-radius:8px ;
+     border-top-right-radius: 8px;
+     background-size: 100% 100%;
+}
+.book{
+    width:144px;
+    height:190px;
+ 
+    border-bottom-right-radius:8px ;
+    border-top-right-radius: 8px;
+    float: left;
+  
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    padding-right:10px;
+   
+   
+}
+
+
+#trash:hover{
+    color:#ec4844;
+}
+.dropdown{
+    position: relative;
+
+}
+.dropdown:hover #trash{
+    display: block;
+}
+
+.book2{
+    width:144px;
+    height:200px;
+    background: #ff0000;
+    border-bottom-right-radius:8px ;
+    border-top-right-radius: 8px;
+    float: left;
+   
+}
+
+.hideDiv{
+    width:100%;
+    height:100%;
+    position: absolute;
+  
+    margin-top: -103px;
+    display: none;
+   
+
+}
+.empty{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d1d1d1;
+    opacity: 0.9;
+
+}
+
+.bookparent{
+    width:300px;
+    height:200px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:100px;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bookparent input{
+    width:300px;
+    border: none;
+    border-bottom: 1px solid ;
+    font-size: 25px;
+   border-bottom: 2px solid rgb(90, 90, 90);
+}
+input:focus{
+    outline: none;
+}
+.bookparent button{
+  
+
+  align-items: center;
+  background: #000000;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  transition: .2s;
+}
+
+.bookparent button:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.boo:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.hideDiv4{
+    width:100%;
+    height:100%;
+    position: absolute;
+    opacity: 0.9;
+    background: #000000;
+    margin-top: -103px;
+   display: none;
+}
+
+
+
+.deleteparent{
+   
+    width:275px;
+    height:170px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius:10px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.deleteparent  p{
+    margin: 0;
+    font-size:18px;
+    text-align: center;
+    line-height:25px;
+}
+.delete__bottom{
+    width: 100%;
+    height:50px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.delete__bottom button{
+    border-radius:5px;
+    font-size:20px;
+    padding: 5px 15px;
+    font-family: LatoRegular,'Open Sans',sans-serif;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    background: #ec4844;
+    color: #fff;
+ 
+}
+.empty2{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #696969;
+    opacity: 0.9;
+
+}
+
+
+.book__navbar{
+    width:70px;
+    height: 30px;
+    background: #ffffff;
+    margin: 20px -50px;
+    box-shadow: rgb(17 17 26 / 10%) 0px 8px 24px, rgb(17 17 26 / 10%) 0px 16px 56px, rgb(17 17 26 / 10%) 0px 24px 80px;
+    border-radius: 6px;
+    padding-top:5px;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+    display: none;
+    position: absolute;
+
+    margin-top: -10px;
+   margin-left:160px;
+    z-index: 1;
+}
+.drop{
+    width:30px;
+    height:30px;
+    /* position: relative; */
+}
+.drop:hover .book__navbar{
+    display: block;
+}

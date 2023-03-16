@@ -1,0 +1,383 @@
+body,html{
+    width: 100%;
+    height:100%;
+    margin:0;
+    
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+.whole__container{
+    width:100%;
+    height:100%
+}
+.navbar{
+    height: 5%;
+    width:100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    /* justify-content:; */
+ /* flex-wrap: wrap; */
+}
+.feed{
+    width: 100%;
+    height:90%;
+    background: #F5F5F5;
+    /* padding:50px; */
+    padding-top: 50px;
+
+    
+}
+::-webkit-scrollbar{
+    width:0px;
+}
+.temp{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.logo{
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    margin-right: 10px;
+}
+.temp i{
+    color:rgb(121, 121, 121);
+    font-size:23px;
+    padding-right: 10px;
+   
+}
+.temp p{
+   font-size: 20px;
+   font-weight: lighter;
+   
+}
+.temp input{
+    width:300px;
+    border: none;
+    border-bottom: 1px solid ;
+
+}
+input:focus{
+    outline: none;
+}
+button{
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.notebook{
+    width:300px;
+    height:242px;
+   
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    padding: 0;
+    /* flex-direction: column; */
+     margin: 30px 0px;
+     float: left;
+     cursor: pointer;
+
+}
+.book{
+    width:172px;
+    height:200px;
+    background: #0096A8;
+   border-radius: 4px;
+    float: left;
+    box-shadow: 0 3px 2px 0 rgb(0 0 0 / 25%);
+    display: flex;
+    justify-content:start;
+    flex-direction: column;
+    align-items: end;
+    padding-right:20px;
+    padding-left:20px;
+    padding-top: 10px;
+    z-index: 0;
+    cursor: pointer;
+   
+}
+.title{
+    width:100%;
+    height:80%;
+    overflow: hidden;
+   
+}
+.book i{
+    cursor: pointer;
+    
+}
+.book__navbar{
+    width: 80px;
+    height: 60px;
+    background: #ffffff;
+    margin: 20px -50px;
+    box-shadow: rgb(17 17 26 / 10%) 0px 8px 24px, rgb(17 17 26 / 10%) 0px 16px 56px, rgb(17 17 26 / 10%) 0px 24px 80px;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+    display: none;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    z-index: 1;
+}
+
+.menu:hover  .book__navbar{
+   color:#ffffff;
+   display: block;
+}
+
+.book__navbar p{
+    margin: 0;
+    padding-bottom: 16px;
+}
+
+.book__navbar p:hover{
+   font-size: 18px;
+   color:#626262;
+}
+
+
+.book2{
+    width:144px;
+    height:200px;
+    background: #ff0000;
+    border-bottom-right-radius:8px ;
+    border-top-right-radius: 8px;
+    float: left;
+   
+}
+
+
+
+.empty{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+}
+
+.bookparent{
+    width:300px;
+    height:200px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:100px;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bookparent input{
+    width:300px;
+    border: none;
+    border-bottom: 1px solid ;
+    font-size: 25px;
+   border-bottom: 2px solid rgb(90, 90, 90);
+}
+input:focus{
+    outline: none;
+}
+.bookparent button{
+  
+
+  align-items: center;
+  background: #f1f1ff;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  transition: .2s;
+ 
+ 
+}
+
+.bookparent button:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.book:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+/* CONTENTPARENT DIV  */
+
+.hideDiv{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background: none;
+    margin-top: -103px;
+    display: none;
+    
+}
+.contentParent{
+    width:70%;
+    height:90%;
+    background:blue;
+   
+    position: relative;
+}
+.right,.left,.west{
+    width:15%;
+    height:100%;
+    background: rgb(0, 0, 0);
+    opacity: 0.3;
+}
+.textAraeparent{
+    width:70%;
+    height:100%;
+    background: #0096A8;
+}
+.top{
+    width:95%;
+    height:70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+.top i{
+    font-size: 30px;
+    color:#000000;
+   
+    cursor: pointer;
+}
+.top i:hover{
+    color:#494949;
+}
+textarea{
+    width:90%;
+    height:88%;
+    background: none;
+    border: none;
+    padding-left:5%;
+    font-weight: lighter;
+    font-family: sans-serif;
+    line-height:35px;
+    font-size:20px;
+}
+textarea:focus{
+    outline: none;
+}
+.bottom{
+    width:100%;
+    height:48px;
+    border-top:1px solid black;
+}
+form{
+    width:100%;
+    height:100%;
+}
+
+.hideDiv2{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background: none;
+    margin-top: -103px;
+    display: none;
+    
+}
+.hideDiv3,.hideDiv4{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background: none;
+    margin-top: -103px;
+    display: none;
+    
+}
+
+
+.dropdown{
+    position: relative;
+}
+.dropdown:hover .book__navbar{
+    display: block;
+}
+
+
+.deleteparent{
+    width:275px;
+    height:170px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius:10px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hideDiv4{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background: none;
+    margin-top: -103px;
+    display: none;
+    opacity: 0.9;
+    background: #a4a4a4;
+    
+}
+.deleteparent  p{
+    margin: 0;
+    font-size:18px;
+    text-align: center;
+    line-height:25px;
+}
+.delete__bottom{
+    width: 100%;
+    height:50px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.delete__bottom button{
+    border-radius:5px;
+    font-size:20px;
+    padding: 5px 15px;
+    font-family: LatoRegular,'Open Sans',sans-serif;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    background: #ec4844;
+    color: #fff;
+ 
+}
+
+.vaccum{
+    width:100%;
+    height: 100%;
+   display: flex;
+ justify-content: center;
+}

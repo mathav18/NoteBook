@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4d02abcf66.js" crossorigin="anonymous"></script>
+    <style> @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap'); </style> 
+    <link href="/home.css" rel="stylesheet" type="text/css" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="whole__container">
+        <div class="navbar">
+            <div class="temp">
+               <div style="background-image:url(./logo.png)" class="logo"></div>
+                <p>NoteBook</p>
+                <p></p>
+            </div>
+
+
+            <div class="temp" style="margin-left: 100px;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+               <input type="text" oninput="filter(this)">
+                <p></p>
+            </div>
+
+
+            <div class="temp" style="margin-left: 300px;">
+               <h2>NoteBooks</h2>
+            </div>
+
+
+            <div class="temp" style="margin-left: 620px;">
+                <button onclick="AddNoteBook()">
+                <i class="fa-solid fa-plus"></i>
+               <p>Add NoteBook</p>
+                </button>
+            </div>
+
+
+            <div class="temp" style="margin-left: 50px;">
+                <button value="<%=ID%>">
+                    <i class="fa-regular fa-user" ></i>
+                </button>
+               
+            </div>
+        </div>
+        <div class="feed">
+
+            <%for(let i=result.length-1;0<=i;i--){%>
+<form action="/gotoNotes" method="POST" id="moon">
+    <div  class="note__book__parent"">
+    <div class="notebook" style="background-image: url(<%=result[i].image%>);">
+        <div class="dropdown">
+            <i class="fa-solid fa-trash-can" id="trash" onclick="delteBook(this)"></i>
+        </div>
+        <button class="book" value="<%=result[i].id%> <%=result[i].uniqueId%>" name="id"></button>
+    </div>
+    <span><%=result[i].title%></span>
+</div>
+
+ </form>
+           <%}%>
+
+
+
+
+           <div class="hideDiv">
+            <div class="empty" >
+                <div class="bookparent">
+                    <input type="text" class="bookTitle">
+                    <button value="<%=ID%>" onclick="addNooteBook(this)">Add NoteBook</button>
+                </div>   
+            </div>
+           </div>
+
+
+
+           <div class="hideDiv4">
+
+            <div class="empty2">
+               <div class="deleteparent">
+               <p>Are you sure you want to <br>delete the noteBook?</p>
+               <div class="delete__bottom">
+                <button style="background: #e5e5e5;color:#000" id="can">Cancel</button>
+                <button class="dlt" onclick="removeNote(this)">Delete</button>
+               </div>
+            </div>
+       </div>
+   </div>
+
+    </div>
+
+
+
+    
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
